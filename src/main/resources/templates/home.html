@@ -6,7 +6,32 @@
     <title>Best of the year</title>
     <th:block th:insert="~{fragment::style}"></th:block>
 </head>
-<body class="container"> 
-    <h1 class="pt-4 pb-4">Best of the year by <span th:text="${name}"></span></h1>
-</body>
+    <nav class="pt-4">
+        <div class="row justify-content-start align-items-center">
+            <div class="col-3">
+               <span class="fs-3">Best of</span>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-secondary"><a th:href="@{/movies}">Film</a></button>
+            </div>
+            <div class="col-3">
+                <button type="button" class="btn btn-dark"><a th:href="@{/songs}">Canzoni</a></button>
+            </div>
+        </div>
+    </nav>
+    <body class="container"> 
+        <div class="row">
+            <div class="col">
+                <th:block th:insert="~{fragment::pageHeader(nome=${name})}"></th:block>
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="col">
+                    guarda i migliori film o canzoni di quest'anno
+                </div>
+            </div>
+        </div>
+        
+
+    </body>
+
 </html>
