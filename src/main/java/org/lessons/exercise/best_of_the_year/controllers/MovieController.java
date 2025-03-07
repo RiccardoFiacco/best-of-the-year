@@ -11,7 +11,13 @@ import org.springframework.ui.Model;
 public class MovieController {
     @GetMapping
     public String Movie(Model model){
-        model.addAttribute("Movies",getBestMovies());
+        ArrayList<Movie> Movies = getBestMovies();
+        String songlist="";
+        for (Movie el : Movies) {
+            songlist += el.getTitolo()+", ";
+        }
+        model.addAttribute("stringMovies", songlist);
+        model.addAttribute("Movies", Movies);
         return "bestMovies";
     }
 
