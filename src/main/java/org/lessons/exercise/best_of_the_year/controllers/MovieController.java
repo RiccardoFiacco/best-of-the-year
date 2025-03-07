@@ -2,17 +2,17 @@ package org.lessons.exercise.best_of_the_year.controllers;
 import java.util.ArrayList;
 import org.lessons.exercise.best_of_the_year.classes.Movie;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.ui.Model;
 
 @Controller
-@RequestMapping("/movie")
-
+@RequestMapping("/movies")
 public class MovieController {
-
+    @GetMapping
     public String Movie(Model model){
         model.addAttribute("Movies",getBestMovies());
-        return "bestMovie";
+        return "bestMovies";
     }
 
     private ArrayList<Movie> getBestMovies(){
