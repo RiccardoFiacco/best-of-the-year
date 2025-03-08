@@ -7,7 +7,16 @@
     <th:block th:insert="~{fragment::style}"></th:block>
 </head>
 <body class="container"> 
-    <th:block th:insert="~{fragment::pageHeader(nome='riccardo')}"></th:block>
-    <h3>Film</h3>
+  <div class="row flex-column">
+      <div class="col">
+          <th:block th:insert="~{fragment::pageHeader(nome='riccardo')}"></th:block>
+      </div>
+      <div class="col"><h3>Film</h3></div>
+      <div class="col">
+        <ul th:each="movie:${Movies}">
+            <a th:href="@{/movies/{id}(id=${movie.getId()})}"><li th:text="${movie.getTitolo()}"></li></a>
+        </ul>
+      </div>
+  </div>
 </body>
 </html>
