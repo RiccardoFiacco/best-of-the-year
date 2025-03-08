@@ -7,15 +7,19 @@
     <th:block th:insert="~{fragment::style}"></th:block>
 </head>
 <body class="container"> 
-  <div class="row flex-column">
-      <div class="col">
+  <div class="row flex-column vh100">
+      <div class="col flex-grow-0">
           <th:block th:insert="~{fragment::pageHeader(nome='riccardo')}"></th:block>
       </div>
-      <div class="col"><h3>Canzoni</h3></div>
-      <div class="col">
-        <ul th:each="song:${songs}">
-            <a th:href="@{/songs/{id}(id=${song.getId()})}"><li th:text="${song.getTitolo()}"></li></a>
-        </ul>
+      <div class="col pt-5"> 
+        <div class="row flex-column align-items-center">
+          <div class="col-3"><h3>Canzoni</h3></div>
+          <div class="col-3">
+            <ul th:each="song:${songs}">
+                <a th:href="@{/songs/{id}(id=${song.getId()})}"><li th:text="${song.getTitolo()}"></li></a>
+            </ul>
+          </div>
+        </div>
       </div>
   </div>
 </body>

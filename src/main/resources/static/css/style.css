@@ -1,10 +1,13 @@
 body{
     background-color: rgb(124, 47, 8);
     color: rgb(237, 230, 225);
-    height: 100vh;
 }
 
 a{
     text-decoration: none;
     color:white
+}
+
+.vh100{
+    height: 100vh;  
 }
