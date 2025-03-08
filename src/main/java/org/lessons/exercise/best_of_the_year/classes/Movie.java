@@ -2,7 +2,7 @@ package org.lessons.exercise.best_of_the_year.classes;
 import java.io.Serializable;
 
 public class Movie implements Serializable {
-    private  int id;
+    private int id;
     private String titolo;
 
     public Movie() {};
