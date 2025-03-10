@@ -11,12 +11,17 @@
       <div class="col">
           <th:block th:insert="~{fragment::pageHeader(nome='riccardo')}"></th:block>
       </div>
-      <div class="col"><h3>Film</h3></div>
-      <div class="col">
-        <ul th:each="movie:${Movies}">
-            <a th:href="@{/movies/{id}(id=${movie.getId()})}"><li th:text="${movie.getTitolo()}"></li></a>
-        </ul>
+      <div class="col pt-5"> 
+        <div class="row flex-column align-items-center">
+          <div class="col-3"><h3>Film</h3></div>
+          <div class="col-3">
+            <ul th:each="movie:${Movies}">
+              <a th:href="@{/movies/{id}(id=${movie.getId()})}"><li th:text="${movie.getTitolo()}"></li></a>
+            </ul>
+          </div>
+        </div>
       </div>
   </div>
 </body>
 </html>
+
