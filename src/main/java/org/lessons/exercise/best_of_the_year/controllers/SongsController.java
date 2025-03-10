@@ -23,7 +23,7 @@ public class SongsController {
         try{
             Song song = songs.get(Id-1); 
             model.addAttribute("canzone", song);
-        }catch (NullPointerException e){
+        }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
         }     
         return "song";

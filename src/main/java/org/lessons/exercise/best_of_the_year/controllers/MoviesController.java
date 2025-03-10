@@ -28,7 +28,7 @@ public class MoviesController {
         try{
             Movie movie = Movies.get(Id-1); 
             model.addAttribute("film", movie);
-        }catch (NullPointerException e){
+        }catch (IndexOutOfBoundsException e){
             e.printStackTrace();
         }     
         return "movie";
