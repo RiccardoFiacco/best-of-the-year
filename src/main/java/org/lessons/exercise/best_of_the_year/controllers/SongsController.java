@@ -1,7 +1,5 @@
 package org.lessons.exercise.best_of_the_year.controllers;
 import java.util.ArrayList;
-
-import org.lessons.exercise.best_of_the_year.classes.Movie;
 import org.lessons.exercise.best_of_the_year.classes.Song;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
